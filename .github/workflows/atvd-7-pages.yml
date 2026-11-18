@@ -40,9 +40,9 @@ jobs:
       - name: Gerar pacote do site
         working-directory: atvd-7
         run: |
-          mkdir -p build
-          cp index.html styles.css build/
-          tar -czf site.tar.gz build
+          mkdir -p dist
+          cp index.html styles.css dist/
+          tar -czf site.tar.gz dist
       - uses: actions/upload-artifact@v4
         with:
           name: site-bundle
