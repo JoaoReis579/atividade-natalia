@@ -1,0 +1,13 @@
+name: Seguranca
+
+on:
+  push:
+
+jobs:
+  verificar-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Demonstrar mascaramento da secret
+        env:
+          CHAVE_MESTRA: ${{ secrets.CHAVE_MESTRA }}
+        run: echo "CHAVE_MESTRA=$CHAVE_MESTRA"
